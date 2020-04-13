@@ -31,6 +31,15 @@
     <%= form.collection_select(:category_id, Category.all, :id, :name, include_blank: true) %>
   </div>
 
+  <div class="field">
+  <div class="field_head">Tag</div>
+    <% Tag.all.each do |tag| %>
+      <label>
+        <%= check_box_tag("product[tag_ids][]", tag.id, tag.id.in?(@product.tags.collect(&:id))) %> <%= tag.name %>
+      </label>
+    <% end %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

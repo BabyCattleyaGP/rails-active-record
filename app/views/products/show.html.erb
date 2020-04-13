@@ -20,5 +20,12 @@
   <%= @product.category.try(:name) %>
 </p>
 
+<p>
+  <strong>Tags:</strong>
+  <% @product.tags.each do |tag| %>
+    <%= tag.name %> ,
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>

@@ -15,10 +15,10 @@ Start with `bundle install`
 
 ## Database Migration
 
-On command line `rake db:migrate`
-Add Category : on rails console `Category.create(name: 'Category Name')`
+* On command line `rake db:migrate`
+* Add Category : on rails console `Category.create(name: 'Category Name')`
 
 ## Run
 
-On terminal run `rails server`
-Access `localhost:3000/products`
+* On terminal run `rails server`
+* Access `localhost:3000/products`
